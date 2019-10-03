@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
+import { Login } from "./Login";
 import "./Nav.css";
 
 const Header = () => (
@@ -15,7 +16,7 @@ const Header = () => (
         <Button id="b-signup" variant="outline-success">
           Signup
         </Button>
-        <Button variant="outline-success">Login</Button>
+        <Login />
       </Form>
     </Navbar.Collapse>
   </Navbar>
