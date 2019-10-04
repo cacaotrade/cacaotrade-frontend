@@ -227,7 +227,7 @@ const OfferForm = props => {
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Bid</Form.Label>
         <Form.Control
-          value={data ? data.type : ""}
+          value={data ? data.bid : ""}
           type="string"
           placeholder="Enter Type"
         />
@@ -262,7 +262,7 @@ const OfferForm = props => {
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Publication</Form.Label>
         <Form.Control
-          value={data ? data.publicationceId : ""}
+          value={data ? data.publicationId : ""}
           type="string"
           placeholder="Enter Publication"
         />
