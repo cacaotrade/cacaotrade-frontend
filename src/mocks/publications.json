@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "1",
+    "message": "Test1",
+    "type": "House",
+    "geolocation": "South",
+    "weight": "100",
+    "price": "23",
+    "userId": "1234",
+    "isActive": true,
+    "deletedAt": "12:0:33"
+  },
+  {
+    "_id": "2",
+    "message": "Test2",
+    "type": "Apartment",
+    "geolocation": "North",
+    "weight": "50",
+    "price": "255",
+    "userId": "1256",
+    "isActive": false,
+    "deletedAt": "12:0:11"
+  }
+]

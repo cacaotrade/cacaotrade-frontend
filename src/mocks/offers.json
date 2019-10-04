@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "1",
+    "message": "Message",
+    "geolocation": "North",
+    "bid": "50",
+    "weight": "35",
+    "userId": "1234",
+    "publicationId": "2345",
+    "isActive": true,
+    "deletedAt": "11:00:34",
+    "timestamps": "11:11:11"
+  }
+]
