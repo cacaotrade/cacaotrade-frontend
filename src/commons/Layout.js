@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Table, Form } from "react-bootstrap";
+import { Container, Row, Col, Table, Form } from "react-bootstrap";
 import { publications, offers } from "../mocks/tableHeader";
 import { AddPublication, EditPublication } from "./Form";
 import "./Layout.css";
