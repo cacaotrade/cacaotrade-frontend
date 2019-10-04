@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar, Nav, Form, Button } from "react-bootstrap";
-import { Login } from "./Form";
+import { Navbar, Nav, Form } from "react-bootstrap";
+import { ModalButton } from "./Form";
 import "./Nav.css";
 
 const Header = props => (
@@ -15,10 +15,8 @@ const Header = props => (
         <Nav.Link onClick={() => props.changePage("Offers")}>Offers</Nav.Link>
       </Nav>
       <Form inline>
-        <Button id="b-signup" variant="outline-success">
-          Signup
-        </Button>
-        <Login />
+        <ModalButton title={"Signup"} />
+        <ModalButton title={"Login"} />
       </Form>
     </Navbar.Collapse>
   </Navbar>

@@ -1,7 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Table, Form } from "react-bootstrap";
 import { publications, offers } from "../mocks/tableHeader";
-import { AddPublication, EditPublication } from "./Form";
+import {
+  AddPublication,
+  EditPublication,
+  AddOffer,
+  EditOffer,
+  ModalButton
+} from "./Form";
 import "./Layout.css";
 
 const Layout = props => (
@@ -9,7 +15,11 @@ const Layout = props => (
     <Row style={{ marginBottom: 30 }}>
       <Col md={4}>{props.page}</Col>
       <Col md={{ span: 4, offset: 4 }}>
-        <AddPublication />
+        {props.page === "Publications" ? (
+          <ModalButton title={"Add publication"} />
+        ) : (
+          <ModalButton title={"Add offer"} />
+        )}
       </Col>
     </Row>
     <Row>{props.children}</Row>
@@ -77,7 +87,7 @@ const TableOffers = props => (
           <td>{data.deletedAt}</td>
           <td>{data.timestamps}</td>
           <td>
-            <EditPublication data={data} />
+            <EditOffer data={data} />
           </td>
         </tr>
       ))}
