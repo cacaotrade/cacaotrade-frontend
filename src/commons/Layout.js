@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Table, Form } from "react-bootstrap";
 import { publications, offers } from "../mocks/tableHeader";
+import { AddPublication, EditPublication } from "./Form";
 import "./Layout.css";
 
 const Layout = props => (
@@ -8,7 +9,7 @@ const Layout = props => (
     <Row style={{ marginBottom: 30 }}>
       <Col md={4}>{props.page}</Col>
       <Col md={{ span: 4, offset: 4 }}>
-        <Button variant="outline-success">Add new</Button>
+        <AddPublication />
       </Col>
     </Row>
     <Row>{props.children}</Row>
@@ -23,6 +24,7 @@ const TablePublications = props => (
         {publications.map((pub, index) => (
           <th key={index}>{pub}</th>
         ))}
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -39,6 +41,9 @@ const TablePublications = props => (
           </td>
           <td>{data.userId}</td>
           <td>{data.deletedAt}</td>
+          <td>
+            <EditPublication data={data} />
+          </td>
         </tr>
       ))}
     </tbody>
@@ -53,6 +58,7 @@ const TableOffers = props => (
         {offers.map((off, index) => (
           <th key={index}>{off}</th>
         ))}
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -70,6 +76,9 @@ const TableOffers = props => (
           <td>{data.publicationId}</td>
           <td>{data.deletedAt}</td>
           <td>{data.timestamps}</td>
+          <td>
+            <EditPublication data={data} />
+          </td>
         </tr>
       ))}
     </tbody>

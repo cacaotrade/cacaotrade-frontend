@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
-import { Login } from "./Login";
+import { Login } from "./Form";
 import "./Nav.css";
 
 const Header = props => (
